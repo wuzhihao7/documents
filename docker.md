@@ -3,7 +3,7 @@
 ```dockerfile
 docker run --name mysql -e MYSQL_ROOT_PASSWORD=root -d -p 3306:3306 daocloud.io/library/mysql:latest
 
-docker run --name mysql -v /root/mysql:/etc/mysql/conf.d -e MYSQL_ROOT_PASSWORD=root -d -p 3306:3306 daocloud.io/library/mysql:latest
+docker run --name mysql -v /root/mysql:/etc/mysql/conf.d -e MYSQL_ROOT_PASSWORD=root --privileged=true -d -p 3306:3306 daocloud.io/library/mysql:latest
 ```
 
 # 文件拷贝
